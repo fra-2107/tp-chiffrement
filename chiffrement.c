@@ -3,8 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 #define ALPHABET 26
-#define ASCIIZ 90
-#define ASCIIA 65
 #define CH_MAX 1000
 
 char Chiffrement(char lettre, int cle)

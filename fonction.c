@@ -14,7 +14,7 @@ char Chiffrement(char lettre, int cle)
       {
         LettreChiffree = LettreChiffree - ALPHA;
       }
-    LettreChiffree = tolower(LettreChiffre);
+    LettreChiffree = tolower(LettreChiffree);
   }
   else if (lettre>='A' && lettre <='Z')
   {

@@ -93,7 +93,7 @@ int main(int argc, char  *argv[])
       i++;
     }
 
-      //allocation dynamique d'une chaine.
+    //allocation dynamique d'une chaine.
     char *chaine1 = NULL;
     chaine1 = malloc (strlen(chaine)*sizeof(char));
     strcpy(chaine1, chaine);
@@ -116,15 +116,8 @@ int main(int argc, char  *argv[])
     printf("votre texte dechiffré : ");
     for (int i=0; i<strlen(chaine1); i++)
     {
-      //verifiaction pour ne changer que les lettres majuscules.
-      if((chaine1[i] >= 'A' && chaine1[i] <= 'Z') || (chaine1[i] >= 'a' && chaine1[i] <= 'z'))
-      {
-        printf("%c", dechiffrement(chaine1[i], cleAuto));
-      }
-      else
-      {
-        printf("%c", chaine1[i]);
-      }
+      printf("%c", dechiffrement(chaine1[i], cleAuto));
+      
     }
     printf("\n");
     free (chaine1);
