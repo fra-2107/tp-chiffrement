@@ -31,18 +31,26 @@ char Chiffrement(char lettre, int cle)
 
 char dechiffrement(char c, int k)
 {
-  //caractere dechiffré
-  char caractereDechiffre=0;
-
-  //dechiffrement du caractere
-  caractereDechiffre=c-k;
-  if (caractereDechiffre<'A' || (caractereDechiffre<'a' && caractereDechiffre>'z'))
+  char dechcara=0;
+  if(c>='a' && c <='z')
   {
-    caractereDechiffre+=ALPHA;
+    c = toupper(c);
+    dechcara = c - k;
+    if (dechcara <'A')
+      {
+        dechcara = dechcara + ALPHA;
+      }
+    dechcara = tolower(dechcara);
   }
-
-  //retour du caractere dechiffré
-  return caractereDechiffre;
+  else if (c>='A' && c <='Z')
+  {
+    dechcara = c - k;
+    if (dechcara >'Z')
+      {
+        dechcara = dechcara + ALPHA;
+      }
+  }
+  return dechcara;
 }
 
 int lettreMax(char *chaine)
@@ -76,6 +84,6 @@ int CalculerCle(char cara)
   int vale= 'E'-'A';
   int cle;
   cle= (cara-'A') - vale;
-  printf("La clé est : %d\n",cle);
+  printf("La cle est : %d\n",cle);
   return cle;
 }

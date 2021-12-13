@@ -8,12 +8,12 @@ int main(int argc, char  *argv[])
     int cle;
     int i = 0;
     //recuperation de la chaine et de la clé.
-    printf("Entrez une phrase ($+entré pour arreter): ");
+    printf("Entrez une phrase ($+enter pour arreter): ");
     while ((phrase[i] = getchar()) != '$')
     {
       i++;
     }
-    printf("Entrez une clé : ");
+    printf("Entrez une cle : ");
     scanf("%d", &cle);
 
     //allocation dynamique d'une chaine.
@@ -23,7 +23,7 @@ int main(int argc, char  *argv[])
     phrase1[i] = '\0';
 
     //chiffrement du texte.
-    printf("Texte chiffré : ");
+    printf("Texte chiffre : ");
     for (i = 0; i < strlen(phrase1); i++)
     {
       if ((phrase1[i] >= 'A' && phrase1[i] <= 'Z' )|| (phrase1[i] >= 'a' && phrase1[i] <= 'z'))
@@ -45,7 +45,7 @@ int main(int argc, char  *argv[])
     int i=0, cle=0;
 
     //recuperation de la chaine.
-    printf("Veuillez entrer le texte chiffré ($+entré pour finir)\n");
+    printf("Veuillez entrer le texte chiffre ($+enter pour finir)\n");
     while ((chaine[i]=getchar())!= '$')
     {
       i++;
@@ -56,14 +56,14 @@ int main(int argc, char  *argv[])
     chaine1 = malloc (strlen(chaine)*sizeof(char));
     strcpy(chaine1, chaine);
     chaine1[i]='\0';
-    printf("votre texte chiffré : %s\n", chaine1);
+    printf("votre texte chiffre : %s\n", chaine1);
 
     //recuperation de la clé
-    printf("veuillez entrer la clé :\n");
+    printf("veuillez entrer la cle :\n");
     scanf("%d", &cle);
 
     //affichage de la chaine dechiffrée.
-    printf("votre texte dechiffré : ");
+    printf("votre texte dechiffre : ");
     for (int i=0; i<strlen(chaine1); i++)
     {
       //verifiaction pour ne changer que les lettres majuscules.
@@ -87,7 +87,7 @@ int main(int argc, char  *argv[])
     int i=0;
 
     //recuperation de la chaine.
-    printf("Veuillez entrer le texte ($+entré pour finir)\n");
+    printf("Veuillez entrer le texte ($+enter pour finir)\n");
     while ((chaine[i]=getchar())!= '$')
     {
       i++;
@@ -110,10 +110,10 @@ int main(int argc, char  *argv[])
 
     i=0;
 
-    printf("votre texte chiffré : %s\n", chaine1);
+    printf("votre texte chiffree : %s\n", chaine1);
 
     //affichage de la chaine dechiffrée.
-    printf("votre texte dechiffré : ");
+    printf("votre texte dechiffree : ");
     for (int i=0; i<strlen(chaine1); i++)
     {
       printf("%c", dechiffrement(chaine1[i], cleAuto));
