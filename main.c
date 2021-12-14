@@ -99,7 +99,7 @@ int main(int argc, char  *argv[])
     int i=0;
 
     //récuperation de la chaine chiffrée.
-    printf("Veuillez entrer le texte ($+enter pour finir)\n");
+    printf("Veuillez entrer le texte ($+enter pour finir) :");
     while ((chaine[i]=getchar())!= '$')
     {
       i++;
