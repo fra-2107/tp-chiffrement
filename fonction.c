@@ -45,7 +45,7 @@ char dechiffrement(char c, int k)
   else if (c>='A' && c <='Z')
   {
     dechcara = c - k;
-    if (dechcara >'Z')
+    if (dechcara < 'A')
       {
         dechcara = dechcara + ALPHA;
       }

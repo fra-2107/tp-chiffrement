@@ -116,8 +116,14 @@ int main(int argc, char  *argv[])
     printf("votre texte dechiffree : ");
     for (int i=0; i<strlen(chaine1); i++)
     {
-      printf("%c", dechiffrement(chaine1[i], cleAuto));
-      
+      if ((chaine1[i]>= 'A' && chaine1[i]<='Z')||(chaine1[i]>= 'a' && chaine1[i]<='z'))
+      {
+        printf("%c", dechiffrement(chaine1[i], cleAuto));
+      }
+      else 
+      {
+        printf("%c", chaine1[i]);
+      }
     }
     printf("\n");
     free (chaine1);
