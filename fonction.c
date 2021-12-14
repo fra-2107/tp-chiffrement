@@ -61,7 +61,14 @@ int lettreMax(char *chaine)
   //creation d'un tableau avec 26 valeurs correspondants aux lettres de l'alphabet.
   for (int i=0; i<a; i++)
   {
-    tab[chaine[i]-'A']++;
+    if (chaine[i]>= 'A' && chaine[i]<='Z')
+    {
+      tab[chaine[i]-'A']++;
+    }
+    else if (chaine[i]>= 'a' && chaine[i]<='z')
+    {
+      tab[chaine[i]-'a']++;
+    }
   }
 
   //parcours du tableau pour trouver la plus grande valeur.

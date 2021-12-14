@@ -66,7 +66,6 @@ int main(int argc, char  *argv[])
     printf("votre texte dechiffre : ");
     for (int i=0; i<strlen(chaine1); i++)
     {
-      //verifiaction pour ne changer que les lettres majuscules.
       if((chaine1[i] >= 'A' && chaine1[i] <= 'Z' )|| (chaine1[i] >= 'a' && chaine1[i] <= 'z'))
       {
         printf("%c", dechiffrement(chaine1[i], cle));
